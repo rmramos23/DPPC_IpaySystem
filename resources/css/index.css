@@ -25,6 +25,7 @@ body {
         width: 100%;
 
 }
+/* make static */
 .container 
 {
     width : 535px;
@@ -35,7 +36,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10%;
 }
 .container-left
 {
