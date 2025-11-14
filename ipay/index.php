@@ -19,7 +19,7 @@
         <h2>(iPay System)</h2>
     </div>
     <div class="userIdTitle">
-        <h3>User ID:</h3>
+        <h3>Username:</h3>
     </div>
     <div class="userIdInput">
         <input type="text" class="userIdInputBox">

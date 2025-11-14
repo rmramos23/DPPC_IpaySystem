@@ -14,24 +14,29 @@
 <body>
 
 <div class="container">
-    <div class="title">
-        <h1>MCA Solutions Limited</h1>
-        <h2>(iPay System---)</h2>
+    <div class="container-left">
+        <img src="..\resources/img/DPPC_LOGO.png" alt="">
     </div>
-    <div class="userIdTitle">
-        <h3>User ID:</h3>
+    <div class="container-divider">
+        
     </div>
-    <div class="userIdInput">
-        <input type="text" class="userIdInputBox">
-    </div>
-    <div class="passwordTitle">
-        <h3>Password:</h3>
-    </div>
-    <div class="passwordInput">
-        <input type="text" class="passwordInputBox">
-    </div>
-    <div class="loginButton">
-        <input type="button" value="Login" class="loginButtonButton">
+    <div class="container-right">
+        <div class="title">
+            <p>iPay System</p>
+        </div>
+        <div class="username-container">
+            <p>Username</p>
+            <input type="text" id="username" >
+        </div>
+        <div class="password-container">
+            <p>Password</p>
+            <input type="password" id="password" class="password-input">
+        </div>
+        <div class="login-container">
+            <div class="login-button">
+                <p>LOGIN</p>
+            </div>
+        </div>
     </div>
 </div>
 
