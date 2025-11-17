@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    /* from resources/css/index.css to resources/fonts/... the correct relative path is ../fonts/... */
+    src: url('../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    /* variable font weight range (adjust if your file supports different range) */
+    font-weight: 100 900;
+    font-display: swap;
+}
+body
+{
+    font-family: 'Lexend Deca';
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*for vertical alignment*/
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin:auto;
+    
+}
+.top-container
+{
+    width: 800px;
+    display:flex;
+    
+}
+.dp_logo
+{
+    width:225px;
+    height: relative;
+    margin-bottom: 15px;
+}   
+
+.dp_logo img
+{
+    display: absolute;
+    width: 90%;
+    height: auto;
+
+}
+
+
+.timekeeping-container
+{
+    width : 800px;
+    height: 550px;
+    box-shadow: 0px 0px 40px darkgray;
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;;
+    background-color: white;
+    padding: 10px;
+}
+.table-container {
+    width: 780px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin-top: 5px;
+}
+
+.table-info {
+    width: 100%;
+    height: 90px;
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    table-layout: fixed;
+    
+  
+    
+}
+
+table,th,td
+{
+    border: 1px solid #324E79;
+    border-collapse: collapse;
+}
+td {
+    height: 30px;
+    padding: 0;
+    font-size: 14px;
+}
+
+td p {
+    margin: 0;
+    padding: 1px;
+    color: #324E79;
+}
+.first-column
+{
+    width:95px;
+}
+
+.divider
+{
+    height: 32px;
+    width:780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider-line
+{
+    width: 100%;
+    height: 2px;
+    background-color: #324E79;
+}
+
+.timeInOutApplication-container
+{
+    width:780px;
+    display: flex;
+    flex-direction: row;
+}
+.left-container
+{
+    width: 460px;
+    height: 380px;
+    border:2px solid #324E79;
+    display: flex;
+    flex-direction: row;
+}
+.timeIn-container
+{
+    width: 229px;
+    height: inherit;
+    display:flex;
+    flex-direction: column;
+    
+}
+.timeIn-title
+{
+    height: 45px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #324E79;
+    font-size: 16px;
+}
+
+.timeIn-value
+{
+    height: 245px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    color:#324E79;
+}
+.timeInbutton-container
+{
+    height:90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeIn-button
+{
+    width: 120px;
+    height: 40px;
+    background-color: #4F8A5B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeInOut-divider
+{
+    width: 2px;
+    height: 100%;
+    background-color: #324E79;
+
+}
+.timeOut-container
+{
+    width:229px;
+    height: inherit;
+}
+
+
+
+
+.right-container
+{
+    width: 312px;
+    height: 380px;
+    border:2px solid #324E79;
+    margin-left: 8px;
+   
+}
+
+
+
+
+
+@media (max-width:600px)
+{
+    .timekeeping-container
+    {
+        width: 350px;
+        height: 550px;
+    }
+}
