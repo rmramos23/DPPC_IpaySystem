@@ -4,7 +4,7 @@
    
     <link rel="stylesheet" href="..\resources/css/index.css">
     <script src="..\resources/javascript/index.js"></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login</title>
 </head>
@@ -12,10 +12,13 @@
 
 
 <body>
-
+    <div class="dplogo">
+    
+            <img src="..\resources/img/dppc_logo_nobg.png" alt="">
+    </div>
     <div class="container">
         <div class="container-left">
-            <img src="..\resources/img/DPPC_LOGO.png" alt="">
+            <img src="..\resources/img/dppc_logo_nobg.png" alt="">
         </div>
         <div class="container-divider">
             
