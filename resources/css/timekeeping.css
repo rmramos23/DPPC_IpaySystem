@@ -58,7 +58,7 @@ body
     padding: 10px;
 }
 .table-container {
-    width: 780px;
+    width: 97.5%;
     height: 90px;
     display: flex;
     align-items: center;
@@ -179,6 +179,11 @@ td p {
     justify-content: center;
     align-items: center;
 }
+.timeIn-button:hover
+{
+    background-color: #3E6F47;
+    
+}
 
 .timeInOut-divider
 {
@@ -193,6 +198,52 @@ td p {
     height: inherit;
 }
 
+.timeOut-title
+{
+    height: 45px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #324E79;
+    font-size: 16px;
+}
+.timeOut-value
+{
+    height: 245px;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 64px;
+    color: #324E79
+}
+.timeOutbutton-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.timeOut-button
+{
+    color: white;
+    width: 120px;
+    background-color: #D96C6C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.timeOut-button:hover
+{
+    background-color: #B84E4E;
+    
+}
+
 
 
 
@@ -202,11 +253,136 @@ td p {
     height: 380px;
     border:2px solid #324E79;
     margin-left: 8px;
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.applyNav-container
+{
+    width:98%;
+    height:45px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: #324E79 1px solid;
+}
+.applyNavOption-container
+{
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: row;
+    width: 70%;
+}
+.applyNavOption-container div
+{
+    width:74px;
+    height: 20px;    
+    /* border:1px black solid; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;  
+    font-size: 11px;
+    margin-left: 3px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+.applyNavLeave-button
+{
+    background-color: #7DA3C1;
+    color: #324E79;
+}
+.applyNavOvertime-button
+{
+    background-color: #324E79;
+    color: white;
+
+}
+.applyNavRecords-button
+{
+    background-color: #324E79;
+    color:white;
 }
 
+.applyNavSubmit-container
+{
+    width:30%;
+    display: flex;
+    justify-content: center;
+}
+.applyNavSubmit-button
+{
+    width: 55px;
+    background-color: #4F8A5B;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: white;
+    cursor: pointer;
+}
+.applyLeaveDate-container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    border: 1px black solid;
+}
+.applyDateFrom-container,.applyDateTo-container
+{
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    align-items: center;
+    color: #324E79;
+}
+.applyDateFrom-container input,.applyDateTo-container input
+{
+    width: 100%;
+    border-radius: 5px;
+    /* outline: none; */
+    padding:5px 2px;
+    color: #324E79;
+    font-size: 14px;
+    border:2px solid #7DA3C1;
 
+    
+}
+.applyLeaveForms-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+}
+.applyLeaveForms-container div
+{
+    height: 27px;
+    /* width: 100%; */
+    /* border:1px solid black; */
+    display: flex;
+    padding:0px;
+    flex-direction: row;
+    align-items: center;
+}
 
+.applyFormsNoDays-title,.applyFormsType-title, .applyFormsReason-title
+{
+    width: 90px;
+    border: 1px solid black;
+}
+.applyFormsNoDays-input, .applyFormsType-input
+{
+    width: 222px;
+    border: 1px solid black;
+}
+.applyFormsNoDays-input input, .applyFormsType-input select
+{
+    width: 100%;
+}
 
 
 @media (max-width:600px)
