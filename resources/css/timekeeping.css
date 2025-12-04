@@ -32,6 +32,8 @@ body
     width:225px;
     height: relative;
     margin-bottom: 15px;
+    /* border: 1px solid #324E79; */
+    /* float: right; */
 }   
 
 .dp_logo img
@@ -58,19 +60,18 @@ body
     padding: 10px;
 }
 .table-container {
-    width: 97.5%;
+    width: 780px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #D9D9D9;
-    margin-top: 5px;
 }
 
 .table-info {
     width: 100%;
-    height: 90px;
-    /* border: 1px solid black; */
+    height: 100%;
+    /* border: 1px solid black  ; */
     border-collapse: collapse;
     table-layout: fixed;
     
@@ -80,8 +81,8 @@ body
 
 table,th,td
 {
-    border: 1px solid #324E79;
-    border-collapse: collapse;
+    border: 2px solid #324E79;
+    /* border-collapse: collapse; */
 }
 td {
     height: 30px;
@@ -96,7 +97,7 @@ td p {
 }
 .first-column
 {
-    width:95px;
+    width:30%;
 }
 
 .divider
@@ -122,7 +123,7 @@ td p {
 }
 .left-container
 {
-    width: 460px;
+    width: 452px;
     height: 380px;
     border:2px solid #324E79;
     display: flex;
@@ -130,7 +131,7 @@ td p {
 }
 .timeIn-container
 {
-    width: 229px;
+    width: 225px;
     height: inherit;
     display:flex;
     flex-direction: column;
@@ -145,6 +146,7 @@ td p {
     align-items: center;
     color: #324E79;
     font-size: 16px;
+    text-align: center;
 }
 
 .timeIn-value
@@ -178,6 +180,7 @@ td p {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .timeIn-button:hover
 {
@@ -194,8 +197,10 @@ td p {
 }
 .timeOut-container
 {
-    width:229px;
+    display: flex;
+    width:225px;
     height: inherit;
+    flex-direction: column;
 }
 
 .timeOut-title
@@ -207,6 +212,7 @@ td p {
     align-items: center;
     color: #324E79;
     font-size: 16px;
+    text-align: center;
 }
 .timeOut-value
 {
@@ -224,6 +230,7 @@ td p {
     justify-content: center;
     align-items: center;
     height: 90px;
+    /* border: 1px solid; */
 }
 
 .timeOut-button
@@ -237,6 +244,7 @@ td p {
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 .timeOut-button:hover
 {
@@ -308,7 +316,8 @@ td p {
 {
     width:30%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-right: 4px;
 }
 .applyNavSubmit-button
 {
@@ -367,12 +376,12 @@ td p {
     padding:0px;
     /* flex-direction: row; */
     align-items: center;
-    margin-bottom: 5px;
 }
 
 .applyFormsType-container, .applyFormsNoDays-container
 {
     height: 27px;
+    margin:2px 2px;
 }
 .applyFormsNoDays-title,.applyFormsType-title
 {
@@ -385,7 +394,7 @@ td p {
 }
 .applyFormsNoDays-input, .applyFormsType-input
 {
-    width: 222px;
+    width: 216px;
     /* border: 1px solid black; */
 }
 .applyFormsNoDays-input input, .applyFormsType-input select
@@ -418,6 +427,7 @@ td p {
     justify-content: center;
     align-items: center;
     height:27px;
+    margin:2px;
 }
 .applyFormsReason-input
 {
@@ -430,7 +440,7 @@ td p {
 {
     border-radius: 5px;
     border:0.5px solid #324E79;
-    width: 90%;
+
     height: 100px;
     font-size: 1em;
     color: #324E79;
@@ -440,7 +450,7 @@ td p {
 
 .applyFormsReason-textArea
 {
-    width: 95%;
+    width: 286px;
     height: 120px;
     resize:none;
     border:#324E79 1px solid;
@@ -450,13 +460,153 @@ td p {
     padding: 5px;
 
 }
+.logoutbutton-container
+{
+    width: 776px;
+    height: 40px;
+    /* border:2px solid black; */
+    display: flex;
+    justify-content: right;
+    /* margin-right: 2px; */
+    align-items: center;
+}
+.logout-button
+{
+    width: 70px;
+    height: 25px;
+    background-color: #324E79;
+    margin: 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
 
+}
 
+/* mobile view */
 @media (max-width:600px)
 {
+    .top-container
+    {
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dp_logo
+    {
+        display: flex;
+        /* justify-content: center; */
+    }
     .timekeeping-container
     {
         width: 350px;
-        height: 550px;
+        height: 580px;
+        display: flex;
+        align-items: center;
+        /* background-color: #324E79; */
+    }
+    .table-container
+    {
+        height: 60px;
+        width: 324px;
+        margin: 5px 0px;
+    }
+    .table-info
+    {
+        width: 324px;
+        height: 60px;
+    }
+    td
+    {
+        height: 20px;
+    }
+    .divider
+    {
+        display: none;
+    }
+    .timeInOutApplication-container
+    {
+        flex-direction: column;
+        width: 320px;
+
+        align-items: center;
+        /* border: 1px solid black;
+        display: flex; */
+    }
+    .left-container
+    {
+        height: 120px;
+        width: 320px;
+        flex-direction: column;
+        margin: 2px 0px;
+    }
+    .timeIn-container, .timeOut-container
+    {
+        flex-direction: row;
+        height:50%;
+        width: 100%;
+    }
+    .timeIn-value, .timeOut-value
+    {
+        height:100%;
+        font-size: 30px;
+        width: 150px;
+    }
+    .timeIn-title, .timeOut-title
+    {
+        height:100%;
+        width: 90px;
+        /* border: 1px black solid; */
+    }
+    .timeInbutton-container, .timeOutbutton-container
+    {
+        height:100%;
+        width: 80px;
+        /* border: 1px solid black; */
+    }
+    .timeInOut-divider
+    {
+        /* display: none; */
+    }
+    .timeIn-button, .timeOut-button
+    {
+        width: 70px;
+        height: 35;
+        font-size: 14px;
+        border-radius: 2px;
+        
+    }
+    .right-container
+    {
+        width: 320px;
+        height: 320px;
+        margin-left: 0px;
+        margin: 2px 0px;
+    }
+    .applyNav-container
+    {
+        width: 100%;
+        height: 28px;
+    }
+    .applyLeaveDate-container
+    {
+        height: 90px;
+    }
+
+    .applyFormsReason-textArea
+    {
+        height: 80px;
+    }
+    .logoutbutton-container
+    {
+
+        width: 320px;
+    }
+    .applyDateTo-container, .applyDateFrom-container 
+    {
+        width: 160px;
     }
 }
