@@ -1,9 +1,18 @@
+<?php
+session_start();
+    include("connection.php");
+    include("functions.php");
+
+    // $user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
    
-    <link rel="stylesheet" href="..\resources/css/index.css">
-    <script src="..\resources/javascript/index.js"></script>
+    <link rel="stylesheet" href="..\resources/css/login.css">
+    <script src="..\resources/javascript/login.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login</title>
