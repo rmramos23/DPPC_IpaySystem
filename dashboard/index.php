@@ -17,7 +17,7 @@ $user_data = check_login($con);
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome!!! <br>sakses sirrr!</h1>
+    <h1>Welcome!!! <br>sakses sirrr <?php echo $user_data['firstName'];?>!</h1>
     <a href="timekeeping.html">logout</a>
 </body>
 </html>
