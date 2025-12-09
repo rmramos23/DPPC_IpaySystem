@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+$user_data = check_login($con);
+check_credentials($user_data);
+// check if user is admin or not
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +36,10 @@
                     <p>Employee:</p>
                 </td>
                 <td>
-                    <p>Richmond A. Ramos</p>
+                    <p>
+                        <?php echo $user_data['firstName'] . " " . $user_data['middleName'] . " " . $user_data['lastName'];;
+                        ?>
+                    </p>
                 </td>
             </tr>
             <tr class="userId">
@@ -32,7 +47,9 @@
                     <p>User ID:</p>
                 </td>
                 <td>
-                    <p>25-0023</p>
+                    <p>
+                        <?php echo $user_data['userName'];?>
+                    </p>
                 </td>
             </tr>
             <tr class="position">
@@ -40,7 +57,9 @@
                     <p>Position:</p> 
                 </td>
                 <td>
-                    <p>Development Engineer</p>
+                    <p>
+                        <?php echo $user_data['position'];?>
+                    </p>
                 </td>
             </tr>
         </table>
@@ -162,8 +181,8 @@
 
         </div>
     </div>
-    <div class="logoutbutton-container">
-        <div class="logout-button">
+    <div class="logoutbutton-container" >
+        <div class="logout-button" onclick="location.href='logout.php'">
             <p>LOGOUT</p>
         </div>
     </div>
