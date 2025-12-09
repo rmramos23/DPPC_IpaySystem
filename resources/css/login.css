@@ -32,7 +32,7 @@ body {
 /* make static */
 .container 
 {
-    width : 535px;
+    width : 500px;
     height: 355px;
     box-shadow: 0px 0px 40px darkgray;
     border-radius: 15px;
@@ -45,7 +45,7 @@ body {
 }
 .container-left
 {
-    width: 49.5%;
+    width: 249px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -57,18 +57,6 @@ body {
     height: auto;
     border-radius: 10px;
 }
-.container-right
-{
-    width: 49.5%;
-    height: 100%;
-    /* border: 1px black solid; */
-    /* background-color: green; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
 .container-divider
 {
     width: 2px;
@@ -76,81 +64,123 @@ body {
     background-color: #324E79;
     border-radius: 5px;
     margin: 0 5px;
+    box-sizing: border-box;
+}
+
+.container-right
+{
+    width: 249px;
+    height: 100%;
+    /* border: 1px black solid; */
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    box-sizing: border-box;
 }
 .title
 {
     /* border:1px solid black; */
     text-align: center;
-    height: 40%;
-    width: 90%;
+    height: 165px;
+    width: 98%;
     color: #324E79;
     font-size: 32px;
     font-family: 'Lexend Deca';
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border:1px solid black; */
+    
+    box-sizing: border-box;
 }
 .username-container
 {
     /* border:1px solid black; */
-    height:20%;
+    height:70px;
     width:100%;
     color: #324E79;
     display: flex;
     flex-direction: column;
     justify-content: left;
     box-sizing: border-box;
+    /* border:1px solid black; */
     
+}
+.username-container p
+{
+    z-index: 1;
+    background-color: white;
+    margin-bottom: -10px;
+    width:100px;
+    /* border:1px solid black; */
+    text-align: center;
+    margin-left: 5px;
 }
 .username-container input
 {
-    height:50px;
+    height:40px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #324E79;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 12px;
     font-family: 'Lexend Deca';
     box-sizing: border-box;
 }
 .username-container input:focus
 {
     outline: 1px solid #ccc;
-    box-shadow: #76adff 0px 0px 10px;
+    box-shadow: #324E79 0px 0px 2px 0px;
 }
 .password-container
 {
     /* border: 1px solid black; */
-    height:20%; 
+    height:70px; 
     width: 100%;
     color: #324E79;
     display: flex;
     flex-direction: column;
     justify-content: left;
     box-sizing: border-box;
+    /* border:1px solid black; */
     
+}
+.password-container p
+{
+    z-index: 1;
+    background-color: white;
+    margin-bottom: -10px;
+    width:100px;
+    /* border:1px solid black; */
+    text-align: center;
+    margin-left: 5px;
 }
 .password-container input
 {
+    height:40px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #324E79;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 12px;
     font-family: 'Lexend Deca';
     box-sizing: border-box;
 }
 .password-container input:focus
 {
     outline: 1px solid #ccc;
-    box-shadow: #76adff 0px 0px 10px;
+    box-shadow: #324E79 0px 0px 2px 0px;
 }
 .login-container
 {
-    height: 20%;
+    box-sizing: border-box;
+    height: 30px;
     /* border: 1px solid black; */
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border:1px solid black; */
 }
 .login-button
 {
@@ -165,6 +195,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 .login-button:hover

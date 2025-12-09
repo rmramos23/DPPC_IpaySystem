@@ -1,8 +1,9 @@
 <?php
-
+    session_start();
     include("connection.php");
     include("functions.php");
-
+    $user_data = check_login($con);
+    check_credentials($user_data);
     // $user_data = check_login($con);
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
@@ -37,7 +38,7 @@
     <title>Roster</title>
     <link rel="stylesheet" href="..\resources/css/navbar.css">
     <link rel="stylesheet" href="..\resources/css/roster.css">
-
+    <script src="..\resources/javascript/roster.js"></script>
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                         <p>LEAVE</p>
                     </div>
                 </div>
-                <div class="navBarRoster-container">
+                <div class="navBarRoster-container" onclick="location.href='roster.php'">
                     <div class="navBarRoster-button">
                         <p>ROSTER</p>
                     </div>
@@ -75,7 +76,7 @@
             </div>
         </div>
         <div class="navBarRight-container">
-            <div class="navBarLogout-container">
+            <div class="navBarLogout-container" id="navBarLogout" onclick="location.href='logout.php'">
                 <div class="navBarLogout-button">
                     <p>LOGOUT</p>
                 </div>
@@ -87,7 +88,7 @@
 
     <!-- END OF ROSTER LIST -->
     <div class="rosterAdd-popUp">
-            <div class="rosterAddBackground-container">
+            <div class="rosterAddBackground-container" onclick="closeRosterAdd()">
 
             </div>
             <div class="rosterAdd-container">
@@ -99,7 +100,7 @@
                         </div>
                         <div class="rosterAddMiddleName-container">
                             <p>Middle Name</p>
-                            <input type="text"name="middleName" required>
+                            <input type="text"name="middleName" >
                         </div>
                         <div class="rosterAddLastName-container">
                             <p>Last Name</p>

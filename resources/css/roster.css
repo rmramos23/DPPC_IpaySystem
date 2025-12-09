@@ -129,4 +129,5 @@ body
     border-radius: 5px;
     background-color: #ffc62a;
     cursor: pointer;
+    border: none;
 }

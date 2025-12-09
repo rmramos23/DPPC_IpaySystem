@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+$user_data = check_login($con);
+check_credentials($user_data);
+// check if user is admin or not
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +49,7 @@
                         <p>LEAVE</p>
                     </div>
                 </div>
-                <div class="navBarRoster-container">
+                <div class="navBarRoster-container" onclick="location.href='roster.php'">
                     <div class="navBarRoster-button">
                         <p>ROSTER</p>
                     </div>
@@ -43,7 +57,7 @@
             </div>
         </div>
         <div class="navBarRight-container">
-            <div class="navBarLogout-container">
+            <div class="navBarLogout-container" id="navBarLogout" onclick="location.href='logout.php'">
                 <div class="navBarLogout-button">
                     <p>LOGOUT</p>
                 </div>

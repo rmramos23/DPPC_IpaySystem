@@ -68,12 +68,7 @@ body {
     height: inherit;
     color: #324E79;
 }
-.navBarRoster-container
-{
-    background-color: #324E79;
-    color:white;
-    box-shadow: inset 0px 0px 5px 0px #1d2d46 ;
-}
+
 .navBarDashboard-container:hover, .navBarPayroll-container:hover, .navBarOvertime-container:hover, .navBarLeave-container:hover, .navBarRoster-container:hover
 {
     cursor: pointer;

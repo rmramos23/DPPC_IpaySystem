@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 session_start();
     include("connection.php");
     include("functions.php");
@@ -19,7 +19,7 @@ session_start();
             if($user_data['password'] === $password)
             {
                 $_SESSION['userName'] = $user_data['userName'];
-                header("Location: index.php");
+                check_credentials($user_data);
                 die;
             }
 
@@ -29,7 +29,7 @@ session_start();
 
 
     }
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html>
@@ -63,11 +63,11 @@ session_start();
                     </div>
                     <div class="username-container">
                         <p>Username</p>
-                        <input type="text" name="userName" >
+                        <input type="text" name="userName"  required>
                     </div>
                     <div class="password-container">
                         <p>Password</p>
-                        <input type="password" name="password" class="password-input">
+                        <input type="password" name="password" class="password-input" required>
                     </div>
                     <div class="login-container">
                         <input type="submit" value="Login" class="login-button">
