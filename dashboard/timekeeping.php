@@ -4,8 +4,61 @@ session_start();
 include("connection.php");
 include("functions.php");
 $user_data = check_login($con);
-check_credentials($user_data);
+
+check_credentials($con);
+$Id = $user_data['userId'];
+$timekeeping = check_timekeeping($con);
+$timeIn = $timekeeping['timeIn'];
+$timeOut = $timekeeping['timeOut'];
+
 // check if user is admin or not
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    //now check if timein or timeout
+    if(isset($_POST['timekeeping-timein']))
+    {
+        //check if time out is null
+        if($timeOut == null)
+        {        
+        //handle time in here
+        if($timeIn == null)
+        {
+            //no time in yet, query for insert
+            $query = "INSERT INTO timekeeping ( userId, officeDate, timeIn) VALUES ('$Id', CURDATE(), CURTIME())";
+            mysqli_query($con, $query);
+        }
+        else
+        {
+         //already have time in, query for update
+            $query = "UPDATE timekeeping SET timeIn = CURTIME() WHERE userId = '$Id'";
+            mysqli_query($con, $query);
+        }
+
+            
+        }
+    }
+    else if(isset($_POST['timekeeping-timeout']))
+    {
+        //handle time out here
+        if($timeOut == null)
+        {
+            //no time out yet, query for insert
+            $query = "UPDATE timekeeping SET timeOut = CURTIME() WHERE userId = '$Id' and officeDate = CURDATE()"; ;
+            mysqli_query($con, $query);
+        }
+        else
+        {
+            //do nothing, already time out, first time out basis
+        }
+        // header("Location: timekeeping.php");
+        // die;
+
+
+    }
+    header("Location: timekeeping.php");
+    die;
+}
 
 
 ?>
@@ -78,13 +131,26 @@ check_credentials($user_data);
                     <p>TIME IN</p>
                 </div>
                 <div class="timeIn-value">
-                    <p>__:__</p>
+                    <p>
+                        <?php
+                            if($timeIn != null)
+                            {
+                                echo $timeIn;
+                            }
+                            else
+                            {
+                                echo "__:__:__";
+                            }   
+                        ?>
+                    </p>
                 </div>
                 <div class="timeInbutton-container">
-                    <div class="timeIn-button"> 
-                        <p>START SHIFT</p>
-
-                    </div>
+                    <form method="post">
+                        <!-- <div class="timeIn-button"> 
+                            <p>START SHIFT</p>
+                        </div> -->
+                        <input type="submit" value="START SHIFT" class="timeIn-button" name="timekeeping-timein">
+                    </form>
                 </div>
             </div>
             
@@ -96,12 +162,26 @@ check_credentials($user_data);
                     <p>TIME OUT</p>
                 </div>
                 <div class="timeOut-value">
-                    <p>__:__</p>
+                    <p>
+                        <?php
+                            if($timeOut != null)
+                            {
+                                echo $timeOut;
+                            }
+                            else
+                            {
+                                echo "__:__:__";
+                            }   
+                        ?>
+                    </p>
                 </div>
                 <div class="timeOutbutton-container">
-                    <div class="timeOut-button">
-                        <p>END SHIFT</p>
-                    </div>
+                    <form method="post">
+                        <input type="submit" value="END SHIFT" class="timeOut-button" name="timekeeping-timeout">
+                        <!-- <div class="timeOut-button" onclick="">
+                            <p>END SHIFT</p>
+                        </div> -->
+                    </form>
                 </div>
             </div>
         </div>

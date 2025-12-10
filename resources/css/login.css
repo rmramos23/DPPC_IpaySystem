@@ -127,6 +127,7 @@ body {
     font-size: 12px;
     font-family: 'Lexend Deca';
     box-sizing: border-box;
+    color: #324E79;
 }
 .username-container input:focus
 {
@@ -165,6 +166,7 @@ body {
     font-size: 12px;
     font-family: 'Lexend Deca';
     box-sizing: border-box;
+    color: #324E79;
 }
 .password-container input:focus
 {
