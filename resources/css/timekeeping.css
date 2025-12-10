@@ -156,7 +156,7 @@ td p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 64px;
+    font-size: 50px;
     color:#324E79;
 }
 .timeInbutton-container
@@ -175,12 +175,14 @@ td p {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border:none;
+    font-size: 14px;
+    /* box-sizing: border-box; */
 }
 .timeIn-button:hover
 {
@@ -222,7 +224,9 @@ td p {
     justify-content: center;
     align-items:center;
     font-size: 64px;
-    color: #324E79
+    color: #324E79;
+    font-size: 50px;
+
 }
 .timeOutbutton-container
 {
@@ -245,6 +249,8 @@ td p {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    border:none;
+    font-size: 14px;
 }
 .timeOut-button:hover
 {
@@ -575,8 +581,9 @@ td p {
     {
         width: 70px;
         height: 35;
-        font-size: 14px;
+        font-size: 8px;
         border-radius: 2px;
+        
         
     }
     .right-container

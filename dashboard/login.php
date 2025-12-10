@@ -18,7 +18,7 @@ session_start();
 
             if($user_data['password'] === $password)
             {
-                $_SESSION['userName'] = $user_data['userName'];
+                $_SESSION['userId'] = $user_data['userId'];
                 check_credentials($user_data);
                 die;
             }

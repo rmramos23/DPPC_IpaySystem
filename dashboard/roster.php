@@ -18,10 +18,31 @@
         $gender = $_POST['gender'];
         $birthday = $_POST['birthday'];
         $dateHired = $_POST['dateHired'];
-
-        $query = "insert into employee (firstName, middleName, lastName, address, position, department, contactNumber, gender, birthday, dateHired) values ('$firstName', '$middleName', '$lastName', '$address', '$position', '$department', '$contactNumber', '$gender', '$birthday' ,'$dateHired')";
+        $userId = random_num(20);
+        $query = "insert into employee (userId, firstName, middleName, lastName, address, position, department, contactNumber, gender, birthday, dateHired) values ( '$userId', '$firstName', '$middleName', '$lastName', '$address', '$position', '$department', '$contactNumber', '$gender', '$birthday' ,'$dateHired')";
         mysqli_query($con, $query);
         
+        //-add username and password using the new id, date -//
+
+        $query = "SELECT * FROM employee WHERE userId = '$userId' limit 1";
+        $result = mysqli_query($con, $query);
+
+        if($result && mysqli_num_rows($result) > 0)
+        {
+        $user_data = mysqli_fetch_assoc($result);
+        $id = $user_data['id']; 
+        // $userName = $user_date['dateHired'] .  $user_data['id'] 
+        $userName = substr(date("Y", strtotime($dateHired)), -2) ."-". str_pad($id, 4, "0", STR_PAD_LEFT);
+        $password = $userName;
+
+        $query = "update employee set userName ='$userName', password = '$password' where userId = '$userId'";
+        mysqli_query($con, $query);
+        // echo "Username and Password for the new employee is: " . $userName;
+        }
+        else
+        {
+            // echo "Error updating username and password." . $userId;   
+        }
         header("Location: dashboard.php");
         die;
 
