@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    /* from resources/css/index.css to resources/fonts/... the correct relative path is ../fonts/... */
+    src: url('../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    /* variable font weight range (adjust if your file supports different range) */
+    font-weight: 100 900;
+    font-display: swap;
+}
+body
+{
+    font-family: 'Lexend Deca';
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*for vertical alignment*/
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+    margin:auto;
+    
+}
+
+.timekeepingTable-container
+{
+    width: 360px;
+    height: auto;
+    border:2px solid black;
+    font-size: 10px;
+}
+.titleTable-container
+{
+    height: 40px;
+    width:360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    color:#324E79;
+    font-size: 20px;
+}
+table
+{
+    font-size:10px;
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    text-align: center;
+ 
+    border-collapse: collapse;
+}
+.table p
+{
+    padding:0px;
+    margin:0px;
+    /* line-height: 0px; */
+}
+
+.labelTop ,.labelBottom 
+{
+    height:20px;
+    width: 120px;
+    border:1px solid black;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #324E79;
+}
+.valueTop, .valueBottom
+{
+    box-sizing: border-box;
+    border:1px solid black;
+    height:20px;
+    width: 240px;
+    
+}   
+
+.tableDivider
+{
+    height:2px;
+    width: 360px;
+    background-color: black;
+}
+.midDate-label ,.midTimeIn-label, .midTimeOut-label
+{
+    border: 1px solid black;
+    width:120px;;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: #324E79;
+    color: white;
+
+}
+.midDate-value, .midTimeIn-value, .midTimeOut-value
+{
+    border:1px solid black;
+    width: 120px;
+    height: 20px;   
+}
+
