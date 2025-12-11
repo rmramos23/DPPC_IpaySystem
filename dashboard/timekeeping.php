@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         if($timeIn == null)
         {
             //no time in yet, query for insert
-            $query = "INSERT INTO timekeeping ( userId, officeDate, timeIn) VALUES ('$Id', CURDATE(), CURTIME())";
+            $query = "INSERT INTO timekeeping ( userId, officeDate, timeIn) VALUES ('$Id', CURDATE(), CURTIME()) ";
             mysqli_query($con, $query);
         }
         else
