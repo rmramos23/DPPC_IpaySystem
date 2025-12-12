@@ -54,9 +54,9 @@
     <div class="payrollTimekeeping-content">
         <div class="payrollTimekeeping-container">
 
-                <div class="container">
+                <div class="container-left">
                     <div class="selectParameter-container">
-                        <select name="" id="">
+                        <select name="" id="" class="selectParameter-select">
                             <option value="">PAYROLL</option>
                             <option value="">TIMEKEEPING</option>
                         </select>
@@ -65,16 +65,36 @@
                         PERIOD
                     </div>
                     <div class="fromDateInput-container">
-                        <p>FROM</p>
+                        <div class="fromDateInput-label">
+                            FROM
+                        </div>
                         <input type="date">
                     </div>
-                    <div class="toDateinput-container">
-                        <p>TO</p>
+                    <div class="toDateInput-container">
+                        <div class="toDateInput-label">
+                            TO
+                        </div>
                         <input type="date">
-                    </div>                
+                    </div>
+                    <div class="generatePayrollTimekeeping-container">
+                        <div class="generatePayrollTimekeeping-button">
+                            GENERATE
+                        </div>
+                    </div>          
                 </div>
-                <div class="container">
 
+                <div class="container-right">
+                    <div class="addHolidayTitle-container">
+                        ADD HOLIDAY
+                    </div>
+                    <div class="addHolidayInputButton-container">
+                        <input type="date" class="addHoliday-input" >
+                        <button class="addHoliday-button">+</button>
+                    </div>
+                    <div class="addHolidayTextarea-container">
+                        <textarea name="" id="" class="addHoliday-textarea"></textarea>
+                    </div>
+                    
                 </div>
             
         </div>

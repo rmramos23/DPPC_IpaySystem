@@ -17,9 +17,198 @@ body
 {
     width:500px;
     height: 300px;
-    border:1px solid black;
+    border:1px solid #324E79;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
 }
-.container
+
+.container-left, .container-right
 {
     width: 250px;
+    height: 300px;
+    /* border: 1px solid #324E79; */
+    box-sizing: border-box;
+    /* border-radius: 5px; */
+}
+.container-left
+{
+    border:1px solid #324E79;
+    border-radius: 5px 0px 0px 5px;
+}
+.container-right
+{
+    border:1px solid #324E79;
+    border-radius: 0px 5px 5px 0px;
+}
+.selectParameter-container
+{
+    width: 250px;
+    height: 60px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectParameter-select
+{
+    width: 170px;
+    height: 35px;
+    box-sizing: border-box;
+    border:1px solid #324E79;
+    border-radius: 5px;
+    color: #324E79;
+    cursor: pointer;
+}
+
+.periodTitle-container
+{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#324E79;
+    font-size:25px;
+}
+
+.fromDateInput-container, .toDateInput-container, .generatePayrollTimekeeping-container
+{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.fromDateInput-label, .toDateInput-label
+{
+    margin-bottom:-5px;
+    color:#324E79;
+    z-index: 1;
+    width:100px;
+    background-color: white;
+    text-align: center;
+    height:15px;
+    font-size: 12px;
+}
+.fromDateInput-container input, .toDateInput-container input
+{
+    width: 170px;
+    height: 35px;
+    box-sizing: border-box;
+    border:1px solid #324E79;
+    border-radius: 5px;
+    color: #324E79;
+    cursor: pointer;
+}
+.toDateInput-container
+{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+.generatePayrollTimekeeping-button
+{
+    width:90px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color:white;
+    background-color: #4F8A5B;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.generatePayrollTimekeeping-button:hover
+{
+    background-color: #3E6F47;
+    transition: 0.3s;
+}
+
+
+
+.addHolidayTitle-container
+{
+    width: 100%;
+    height:90px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #324E79;
+
+}
+.addHolidayInputButton-container
+{
+    width: 100%;
+    height:90px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.addHolidayTextarea-container
+{
+    width: 100%;
+    height:120px;
+    /* border:1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.addHoliday-input
+{
+    width:170px;
+    height:35px;
+    box-sizing: border-box;
+    border:1px solid #324E79;
+    border-right:none;
+    border-radius: 5px 0px 0px 5px;
+    color: #324E79;
+    cursor: pointer;
+}
+.addHoliday-button
+{
+    width:30px;
+    height: 35px;
+    font-size:12px;
+    box-sizing: border-box;
+    border:1px solid #324E79;
+    border-left:none;
+    border-radius: 0px 5px 5px 0px;
+    background-color:#324E79;
+    color: white;
+}
+.addHoliday-button:hover
+{
+    cursor: pointer;
+    background-color:#223354;
+    transition: 0.3s;
+}
+.addHoliday-textarea
+{
+    width: 200px;
+    height: 100px;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border:1px solid #324E79;
+    color: #324E79;
 }
